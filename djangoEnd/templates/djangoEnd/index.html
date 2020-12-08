@@ -2,21 +2,26 @@
 <html >
 	<head>
 		<title>Document</title>
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 	</head>
 	<body>
 		<div id="app">
-			{{message}}
+			<p>[[title]]</p>
+			<p>[[message]]</p>
 		</div>
 
 		<script>
 			var app = new Vue({
+				delimiters: ['[[', ']]'],
 				el: '#app',
 				data: {
-					message: 'Hello!!'
+					title: 'chageTitle!!',
+					message: 'changeMessage!!'
 				}
 			})
+	
 		</script>
+
 	</body>
 </html>
